@@ -10,7 +10,6 @@ const handleDuplicateFielsDB = err => {
     const message = `Duplicated field value : ${value}. Please use another value!`;
     return new AppError(message, 400);
   }
-  // در صورتی که errmsg وجود نداشته باشد، پیام عمومی‌تری به کاربر نمایش داده می‌شود
   return new AppError('Duplicate field value. Please use another value!', 400);
 };
 const handleValidationErrorDB = err => {
@@ -35,7 +34,7 @@ const sendErrorDev = (err, req, res) => {
     });
   }
   // Rendered WebSite
-  console.error('ERROORR', err);
+  console.log('Error :', err);
   return res.status(err.statusCode).render('error', {
     title: 'Something went wrong!',
     msg: err.message

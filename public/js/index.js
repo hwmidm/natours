@@ -38,9 +38,9 @@ if (userDataForm) {
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
 
-    for (let [key, value] of form.entries()) {
-      console.log(key, value);
-    }
+    // for (let [key, value] of form.entries()) {
+    //   console.log(key, value);
+    // }
 
     updateSettings(form, 'data');
   });

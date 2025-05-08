@@ -7,12 +7,8 @@ export const displayMap = locations => {
     }
 
     const mapElement = document.getElementById('map');
-    if (!mapElement) {
-      console.error('کانتینر نقشه پیدا نشد!');
-      return;
-    }
 
-    console.log('Locations:', locations);
+
 
     maplibregl.accessToken = 'NO_TOKEN_NEEDED';
 
@@ -27,7 +23,6 @@ export const displayMap = locations => {
     });
 
     map.on('load', () => {
-      console.log('نقشه با موفقیت بارگذاری شد');
       map.resize();
 
       const bounds = new maplibregl.LngLatBounds();
