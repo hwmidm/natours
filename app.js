@@ -16,6 +16,8 @@ const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
+
+// start exprss App
 const app = express();
 
 app.set('view engine', 'pug');
